@@ -1,0 +1,85 @@
+<Soup>
+<food>
+<name>Prawn &amp; Monkish Soup</name>
+<price>$5.95</price>
+<Rating>3.5</Rating>
+</food>
+
+<food>
+<name>Amalfi-Style Fish Soup</name>
+<price>$5.05</price>
+<Rating>3.8</Rating>
+</food>
+
+<food>
+<name>Asparagus &amp; Grana Padano</name>
+<price>$5.95</price>
+<Rating>3.12</Rating>
+</food>
+
+<food>
+<name>Parsley Vinaigrette</name>
+<price>$2.95</price>
+<Rating>3.56</Rating>
+</food>
+
+<food>
+<name>Rolled Aubergines </name>
+<price>$5.95</price>
+<Rating>3.6</Rating>
+</food>
+
+<food>
+<name>Pancetta</name>
+<price>$3.95</price>
+<Rating>4.5</Rating>
+</food>
+
+<food>
+<name>Bagna cauda</name>
+<price>$3.95</price>
+<Rating>4.5</Rating>
+</food>
+
+<food>
+<name>Sardines al saor</name>
+<price>$3.95</price>
+<Rating>4.5</Rating>
+</food>
+
+<food>
+<name>Stracciatella soup</name>
+<price>$3.95</price>
+<Rating>4.5</Rating>
+</food>
+<food>
+<name>Griddled octopus</name>
+<price>$3.95</price>
+<Rating>4.5</Rating>
+</food>
+<food>
+<name>Pancetta-wrapped</name>
+<price>$3.95</price>
+<Rating>4.5</Rating>
+</food>
+
+<food>
+<name>Pancetta-wrapped</name>
+<price>$3.95</price>
+<Rating>4.5</Rating>
+</food>
+
+<food>
+<name>Pancetta-wrapped</name>
+<price>$3.95</price>
+<Rating>4.5</Rating>
+</food>
+
+<food>
+<name>Pancetta-wrapped</name>
+<price>$3.95</price>
+<Rating>4.5</Rating>
+</food>
+
+
+</Soup>
