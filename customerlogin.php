@@ -6,7 +6,7 @@ $name=$_COOKIE['email'];
 $pass=$_COOKIE['pass'];
 echo "<script>
 document.getElementById('email').value='$name';
-document.getElementById('pass').value='pass';
+document.getElementById('pass').value='$pass';
 </script>";
 }
 ?>
@@ -37,16 +37,16 @@ document.getElementById('pass').value='pass';
     <p class="h4 mb-4">Sign in</p>
 
     <!-- Email -->
-    <input type="email" id="defaultLoginFormEmail" name='email' class="form-control mb-4" placeholder="E-mail">
+    <input type="email" id="defaultLoginFormEmail" name='email' class="form-control mb-4" placeholder="E-mail" required>
 
     <!-- Password -->
-    <input type="password" id="defaultLoginFormPassword" name='password' class="form-control mb-4" placeholder="Password">
+    <input type="password" id="defaultLoginFormPassword" name='password' class="form-control mb-4" placeholder="Password" required>
 
     <div class="d-flex justify-content-around">
         <div>
             <!-- Remember me -->
             <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <input type="checkbox" name="remember" class="custom-control-input" id="defaultLoginFormRemember">
                 <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
             </div>
         </div>

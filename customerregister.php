@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html>
-<?php
-if(isset($_COOKIE['email'])and isset($_COOKIE['pass'])){
-$email=$_COOKIE['email'];
-$pass=$_COOKIE['pass'];
-echo "<script>
-document.getElementById('email').value='$email';
-document.getElementById('pass').value='pass';
-</script>";
-}
-?>
+
+<?php include 'processform.php';
+echo "Iam to process";?>
 <head>
 	<title>Cinnamon's Login</title>
 	<!-- Font Awesome -->
@@ -32,35 +25,48 @@ document.getElementById('pass').value='pass';
 <body>
 	<div class='card' style='width:600px;top: 20%;left:32%;position: absolute;'>
 	<!-- Default form register -->
-<form method="post" class="text-center border border-light p-5" action="registration.php">
+<form method="post" class="text-center border border-light p-5" action="" enctype="multipart/form-data">
 
     <p class="h4 mb-4">Sign up</p>
 
     <div class="form-row mb-4">
         <div class="col">
             <!-- First name -->
-            <input type="text" name='firstname' id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+            <input type="text" name='firstname' id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" required>
         </div>
+        
         <div class="col">
             <!-- Last name -->
-            <input type="text" name='lastname' id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+            <input type="text" name='lastname' id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" required>
         </div>
     </div>
 
+
     <!-- E-mail -->
-    <input type="email" name='user' id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+    <input type="email" name='user' id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" required>
 
     <!-- Password -->
-    <input type="password" name='passw' id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <input type="password" name='passw' id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
     <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
         At least 8 characters and 1 digit
     </small>
 
     <!-- Phone number -->
-    <input type="text" name='mobile' id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+    <input type="text" name='mobile' id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" required>
     <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
         Optional - for two step authentication
     </small>
+    <?php if(!empty($msg));
+        ?>
+    <div class="alert<?php echo $css_class;?>">
+        <?php echo $msg;?>
+</div>
+
+    <php endif;?>
+    <div class="form-group">
+        <label for='profileimage'>Profile image</label>
+        <input type="file" name="profileimage" id='profileimage' class="form-control" required>
+    </div>
 
     <!-- Newsletter -->
     <div class="custom-control custom-checkbox">
@@ -69,7 +75,7 @@ document.getElementById('pass').value='pass';
     </div>
 
     <!-- Sign up button -->
-     <input type='submit' class="btn btn-info btn-block my-4" name='Login' value='Login' type="submit">
+     <input type='submit' class="btn btn-info btn-block my-4" name='Login' value='Register' type="submit">
 
     <!-- Social register -->
     <p>or sign up with:</p>
@@ -83,10 +89,10 @@ document.getElementById('pass').value='pass';
 
     <!-- Terms of service -->
     <p>By clicking
-        <em>Sign up</em> you agree to our
-        <a href="" target="_blank">terms of service</a>
+        <em>Sign up</em> you agree to our terms of service</p>
 
 </form>
+
 <!-- Default form register -->
 </div>
 </body>
